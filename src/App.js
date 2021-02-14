@@ -1,9 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import useScript from './useScript.js';
 
-class App extends React.Component {
-  render (){
+function App() {
+  useScript('../js/epub.js');
+  useScript('../js/epub.min.js');
+  useScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js');
+  useScript('../js/reader.js');
+
     return (
       <div className="App">
         <div styles="margin-top:50px;">
@@ -16,7 +21,6 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
 export default App;
